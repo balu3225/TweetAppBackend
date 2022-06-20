@@ -41,7 +41,7 @@ import com.tweetapp.api.service.UserService;
  * @author Resolute
  * 
  */
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1.0/tweets")
 public class TweetAppController 
