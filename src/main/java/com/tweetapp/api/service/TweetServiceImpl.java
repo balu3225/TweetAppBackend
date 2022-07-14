@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tweetapp.api.exception.IncorrectOrDeletedTweet;
-import com.tweetapp.api.kafka.ProducerService;
+import com.tweetapp.api.kafka.KafkaProducerService;
 import com.tweetapp.api.model.Tweet;
 import com.tweetapp.api.model.User;
 import com.tweetapp.api.repository.TweetRepository;
@@ -26,7 +26,7 @@ public class TweetServiceImpl implements TweetService
 	UserRepository userRepository;
 	
 	@Autowired
-	ProducerService producerService;
+	KafkaProducerService producerService;
 	
 	Logger logger = LoggerFactory.getLogger(TweetServiceImpl.class);
 	

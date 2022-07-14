@@ -18,7 +18,7 @@ import com.tweetapp.api.repository.UserRepository;
 
 import com.tweetapp.api.exception.InvalidUsernameOrPasswordException;
 import com.tweetapp.api.exception.UsernameAlreadyExists;
-import com.tweetapp.api.kafka.ProducerService;
+import com.tweetapp.api.kafka.KafkaProducerService;
 @Service
 public class UserServiceImpl implements UserService 
 {
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService
 //	UserRepository userRepository;
 	
 	@Autowired
-	ProducerService producerService; 
+	KafkaProducerService producerService;
 	
 	private UserRepository userRepository;
     private TokenService tokenService;

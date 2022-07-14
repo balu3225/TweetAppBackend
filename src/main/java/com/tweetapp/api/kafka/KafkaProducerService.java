@@ -7,10 +7,10 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProducerService 
+public class KafkaProducerService
 {
 	public static final String topic = "TweetMessage";
-	private static final Logger logger = LoggerFactory.getLogger(ProducerService.class);
+	private static final Logger logger = LoggerFactory.getLogger(KafkaProducerService.class);
 
 	@Autowired
 	private KafkaTemplate<String,String> kafkaTemp;

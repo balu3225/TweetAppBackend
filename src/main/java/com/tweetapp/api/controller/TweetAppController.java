@@ -21,19 +21,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
 import com.tweetapp.api.exception.InvalidUsernameOrPasswordException;
 import com.tweetapp.api.exception.UsernameAlreadyExists;
-import com.tweetapp.api.kafka.ProducerService;
+import com.tweetapp.api.kafka.KafkaProducerService;
 import com.tweetapp.api.model.ErrorMessages;
 import com.tweetapp.api.model.Tweet;
 import com.tweetapp.api.model.User;
 import com.tweetapp.api.model.UserResponse;
-import com.tweetapp.api.repository.UserRepository;
 import com.tweetapp.api.service.TweetService;
 import com.tweetapp.api.service.UserService;
 /**
@@ -54,7 +52,7 @@ public class TweetAppController
 	TweetService tweetService;
 	
 	@Autowired
-	ProducerService producerService; 
+	KafkaProducerService producerService;
 	
 	
 	
